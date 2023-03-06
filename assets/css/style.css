@@ -1,0 +1,39 @@
+#summary_report_table th,
+.Top_gene_table th,
+.Top_mutation_table th{
+    text-align: center !important;
+    font-weight: 400;
+}
+#summary_report_table td{
+    text-align: center;
+    font-size:small;
+    background-color: white !important;
+    box-sizing: border-box;
+}
+
+#summary_report_table tfoot {
+    display: table-header-group;
+}
+#chart_1,
+#chart_2{
+    width: 100%;
+    height: 27rem;;
+    font-size: 0.7rem;
+}
+
+.g_m_info{
+    text-align: left;
+}
+
+.mutation_info_name span,
+.gene_info_name span{
+    color:black;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.red{color:red;}
+.green{color:green;}
+.blue{color:blue;}
+
+

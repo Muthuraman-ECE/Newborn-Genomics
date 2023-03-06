@@ -1,0 +1,172 @@
+{
+        "data": [
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.1521_1523del p.Phe508del",
+                        "Location": "7:117199644",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "Pathogenic",
+                        "Patients": 2,
+                        "Frequency": 0.72,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 1"
+                },
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.1585-1G>A",
+                        "Location": "7:117227792",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "Pathogenic",
+                        "Patients": 1,
+                        "Frequency": 0.0071,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 2"
+                },
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.1521_1523delCTT p.(Phe508del) GRCh37(hg19)",
+                        "Location": "Chr7: g.117199646_117199648del",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "Pathogenic",
+                        "Patients": 2,
+                        "Frequency": 0.6,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 3"
+                },
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.2978A > C p.D993A",
+                        "Location": "Chr7: g.117199646_117199648del",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "Likely Pathogenic",
+                        "Patients": 9,
+                        "Frequency": 0.1,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 4"
+                },
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.1729T > C p.Y577H",
+                        "Location": "ChrX: 74591586 ",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "VUS",
+                        "Patients": 2,
+                        "Frequency": 1.2,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 5"
+                },
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.3468 + 52A > C",
+                        "Location": "Chr7: g.117199646_117199648del",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "VUS",
+                        "Patients": 2,
+                        "Frequency": 0.8,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 6"
+                },
+                {
+                        "Disease": "Fibroddsis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.3468 + 52A1 > C",
+                        "Location": "Chr7: g.117199646_117199648del",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "VUS",
+                        "Patients": 2,
+                        "Frequency": 0.8,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 7"
+                },
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.1521_1523del p.Phe508del",
+                        "Location": "7:117199644",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "Pathogenic",
+                        "Patients": 2,
+                        "Frequency": 0.72,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 8"
+                },
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.15f85-1G>A",
+                        "Location": "7:117227792",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "Pathogenic",
+                        "Patients": 1,
+                        "Frequency": 0.0071,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 9"
+                },
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.1521_1523delCTT p.(Phe508del) GRCh37(hg19)",
+                        "Location": "Chr7: g.117199646_117199648del",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "Pathogenic",
+                        "Patients": 2,
+                        "Frequency": 0.6,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 10"
+                },
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.2978A > C p.D993A",
+                        "Location": "Chr7: g.117199646_117199648del",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "Likely Pathogenic",
+                        "Patients": 9,
+                        "Frequency": 0.1,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 11"
+                },
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.1729T > C p.Y577H",
+                        "Location": "ChrX: 74591586 ",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "VUS",
+                        "Patients": 2,
+                        "Frequency": 1.2,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 12"
+                },
+                {
+                        "Disease": "Cystic Fibrosis",
+                        "Gene": "CFTR",
+                        "Mutation": "c.3468 + 52A > C",
+                        "Location": "Chr7: g.117199646_117199648del",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "VUS",
+                        "Patients": 2,
+                        "Frequency": 0.8,
+                        "Gene_info":"Gene info is given the json CFTR",
+                        "Mut_info":"Mutation info is given in the json 13"
+                },
+                {
+                        "Disease": "Fibroddsis",
+                        "Gene": "gfdR",
+                        "Mutation": "c.3468 + 52A1 > C",
+                        "Location": "Chr7: g.117199646_117199648del",
+                        "Zygosity": "Heterozygous",
+                        "Classification": "VUS",
+                        "Patients": 2,
+                        "Frequency": 0.8,
+                        "Gene_info":"Gene info is given the json gfdR",
+                        "Mut_info":"Mutation info is given in the json 14"
+                }
+        ]
+}
