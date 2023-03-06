@@ -1,0 +1,2920 @@
+<!DOCTYPE html>
+<html lang="en" data-select2-id="6">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://live.genome.com/assets/images/ico/favicon.ico"> <!---->
+  <link type="text/css" href="./assets/css/bootstrap.min.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="../assets/css/fontawesome-v6-all.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../assets/css/jquery.webui-popover.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../assets/css/tokenize2.css">
+  <link type="text/css" rel="stylesheet" href="../assets/css/introjs.min.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../assets/css/jquery.Scrollbar.min.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../assets/css/switcher.css">
+  <link type="text/css" rel="stylesheet" href="../assets/css/pagination.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../assets/css/owl.carousel.css" media="screen">
+  
+  <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" media="screen">
+  <!--
+    <link type="text/css" rel="stylesheet" href="./assetrs/css/select2.min.css" media="screen">
+    <link rel="stylesheet" href="./node_modules/overlayscrollbars/css/OverlayScrollbars.min.css">
+  -->  <link type="text/css" rel="stylesheet" href="../assets/css/gesa.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../assets/css/cohortRef.css" media="screen">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--
+  <link type="text/css" rel="stylesheet" href="/assets/css/jquery.webui-popover.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/assets/css/tokenize2.css">
+  <link type="text/css" rel="stylesheet" href="/assets/css/introjs.min.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="/assets/css/jquery.Scrollbar.min.css" media="screen">
+
+  <link type="text/css" rel="stylesheet" href="/assets/css/pagination.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="/assets/css/owl.carousel.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="/assets/css/select2.min.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="/assets/css/jquery.dataTables.css" media="screen">
+
+
+  <link type="text/css" rel="stylesheet" href="/assets/css/gesa.css" media="screen"> 
+  <link type="text/css" rel="stylesheet" href="/assets/css/cohortRef.css" media="screen"> 
+
+  <link rel="stylesheet" href="asserts/css/jquery.scrollbar.min.css" integrity="sha512-xlddSVZtsRE3eIgHezgaKXDhUrdkIZGMeAFrvlpkK0k5Udv19fTPmZFdQapBJnKZyAQtlr3WXEM3Lf4tsrHvSA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  -->
+  <script src="https://code.highcharts.com/highcharts.js"></script> 
+  <script src="https://code.highcharts.com/modules/venn.js"></script> 
+  
+  
+  <style type="text/css">
+  .igv-user-feedback {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 512px;
+  height: 360px;
+  z-index: 2048;
+  background-color: white;
+  border-color: #a2a2a2;
+  border-style: solid;
+  border-width: thin;
+  font-family: "Open Sans", sans-serif;
+  font-size: medium;
+  font-weight: 400;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center; }
+  .igv-user-feedback div:first-child {
+    position: relative;
+    height: 24px;
+    width: 100%;
+    background-color: white;
+    border-bottom-color: #a2a2a2;
+    border-bottom-style: solid;
+    border-bottom-width: thin; }
+    .igv-user-feedback div:first-child div {
+      position: absolute;
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      background-color: transparent; }
+    .igv-user-feedback div:first-child div:first-child {
+      left: 8px; }
+    .igv-user-feedback div:first-child div:last-child {
+      cursor: pointer;
+      right: 8px; }
+  .igv-user-feedback div:last-child {
+    width: 100%;
+    height: calc(100% - 24px);
+    border-width: 0; }
+    .igv-user-feedback div:last-child div {
+      width: auto;
+      height: auto;
+      margin: 8px; }
+
+.igv-color-swatch {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 4px; }
+
+.igv-colorpicker-menu-close-button {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding-right: 8px; }
+  .igv-colorpicker-menu-close-button i.fa {
+    display: block;
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #5f5f5f; }
+  .igv-colorpicker-menu-close-button i.fa:hover,
+  .igv-colorpicker-menu-close-button i.fa:focus,
+  .igv-colorpicker-menu-close-button i.fa:active {
+    cursor: pointer;
+    color: #0f0f0f; }
+
+.igv-alert-dialog-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 256px;
+  border-color: #7F7F7F;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: thin;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  z-index: 2048;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center; }
+  .igv-alert-dialog-container div:first-child {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 24px;
+    cursor: move;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-color: #7F7F7F;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    background-color: #eee; }
+    .igv-alert-dialog-container div:first-child div {
+      margin-right: 4px;
+      margin-bottom: 2px;
+      height: 12px;
+      width: 12px;
+      color: #7F7F7F; }
+    .igv-alert-dialog-container div:first-child div:hover {
+      cursor: pointer;
+      color: #444; }
+  .igv-alert-dialog-container #igv-alert-dialog-body {
+    color: #373737;
+    width: 100%;
+    height: calc(100% - 24px - 64px);
+    overflow-y: scroll; }
+    .igv-alert-dialog-container #igv-alert-dialog-body #igv-alert-dialog-body-copy {
+      cursor: pointer;
+      margin: 16px;
+      width: auto;
+      height: auto;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      background-color: white;
+      border: unset; }
+  .igv-alert-dialog-container div:last-child {
+    width: 100%;
+    height: 64px;
+    background-color: white;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; }
+    .igv-alert-dialog-container div:last-child div {
+      width: 98px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      color: white;
+      font-family: "Open Sans", sans-serif;
+      font-size: medium;
+      font-weight: 400;
+      border-color: #2B81AF;
+      border-style: solid;
+      border-width: thin;
+      border-radius: 4px;
+      background-color: #2B81AF; }
+    .igv-alert-dialog-container div:last-child div:hover {
+      cursor: pointer;
+      border-color: #25597f;
+      background-color: #25597f; }
+
+.igv-generic-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2048;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center; }
+  .igv-generic-container div:first-child {
+    cursor: move;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    height: 24px;
+    width: 100%;
+    background-color: #dddddd; }
+    .igv-generic-container div:first-child i {
+      display: block;
+      color: #5f5f5f;
+      cursor: pointer;
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+      margin-bottom: 4px; }
+
+.igv-generic-dialog-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 200px;
+  border-color: #7F7F7F;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: thin;
+  font-family: "Open Sans", sans-serif;
+  font-size: medium;
+  font-weight: 400;
+  z-index: 2048;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center; }
+  .igv-generic-dialog-container .igv-generic-dialog-header {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 24px;
+    cursor: move;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-color: #7F7F7F;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    background-color: #eee; }
+    .igv-generic-dialog-container .igv-generic-dialog-header div {
+      margin-right: 4px;
+      margin-bottom: 2px;
+      height: 12px;
+      width: 12px;
+      color: #7F7F7F; }
+    .igv-generic-dialog-container .igv-generic-dialog-header div:hover {
+      cursor: pointer;
+      color: #444; }
+  .igv-generic-dialog-container .igv-generic-dialog-one-liner {
+    color: #373737;
+    width: 95%;
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 8px;
+    padding-left: 8px;
+    overflow-wrap: break-word;
+    background-color: white; }
+  .igv-generic-dialog-container .igv-generic-dialog-label-input {
+    margin-top: 8px;
+    width: 95%;
+    height: 24px;
+    color: #373737;
+    line-height: 24px;
+    padding-left: 8px;
+    background-color: white;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+    .igv-generic-dialog-container .igv-generic-dialog-label-input div {
+      width: 30%;
+      height: 100%;
+      font-size: 16px;
+      text-align: right;
+      padding-right: 8px;
+      background-color: white; }
+    .igv-generic-dialog-container .igv-generic-dialog-label-input input {
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding-left: 4px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      color: #373737;
+      text-align: left;
+      outline: none;
+      border-style: solid;
+      border-width: thin;
+      border-color: #7F7F7F;
+      background-color: white; }
+    .igv-generic-dialog-container .igv-generic-dialog-label-input input {
+      width: 50%;
+      font-size: 16px; }
+  .igv-generic-dialog-container .igv-generic-dialog-input {
+    margin-top: 8px;
+    width: calc(100% - 16px);
+    height: 24px;
+    color: #373737;
+    line-height: 24px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center; }
+    .igv-generic-dialog-container .igv-generic-dialog-input input {
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding-left: 4px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      color: #373737;
+      text-align: left;
+      outline: none;
+      border-style: solid;
+      border-width: thin;
+      border-color: #7F7F7F;
+      background-color: white; }
+    .igv-generic-dialog-container .igv-generic-dialog-input input {
+      font-size: 16px; }
+  .igv-generic-dialog-container .igv-generic-dialog-ok-cancel {
+    width: 100%;
+    height: 28px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center; }
+    .igv-generic-dialog-container .igv-generic-dialog-ok-cancel div {
+      margin-top: 32px;
+      color: white;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      width: 75px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      border-color: transparent;
+      border-style: solid;
+      border-width: thin;
+      border-radius: 2px; }
+    .igv-generic-dialog-container .igv-generic-dialog-ok-cancel div:first-child {
+      margin-left: 32px;
+      margin-right: 0;
+      background-color: #5ea4e0; }
+    .igv-generic-dialog-container .igv-generic-dialog-ok-cancel div:last-child {
+      margin-left: 0;
+      margin-right: 32px;
+      background-color: #c4c4c4; }
+    .igv-generic-dialog-container .igv-generic-dialog-ok-cancel div:first-child:hover {
+      cursor: pointer;
+      background-color: #3b5c7f; }
+    .igv-generic-dialog-container .igv-generic-dialog-ok-cancel div:last-child:hover {
+      cursor: pointer;
+      background-color: #7f7f7f; }
+  .igv-generic-dialog-container .igv-generic-dialog-ok {
+    width: 100%;
+    height: 36px;
+    margin-top: 32px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center; }
+    .igv-generic-dialog-container .igv-generic-dialog-ok div {
+      width: 98px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      color: white;
+      font-family: "Open Sans", sans-serif;
+      font-size: medium;
+      font-weight: 400;
+      border-color: white;
+      border-style: solid;
+      border-width: thin;
+      border-radius: 4px;
+      background-color: #2B81AF; }
+    .igv-generic-dialog-container .igv-generic-dialog-ok div:hover {
+      cursor: pointer;
+      background-color: #25597f; }
+
+.igv-popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 128px;
+  z-index: 4096;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  font-weight: 400;
+  color: #4b4b4b;
+  background-color: white;
+  border-radius: 4px;
+  border-color: #7F7F7F;
+  border-style: solid;
+  border-width: thin;
+  display: none; }
+
+.igv-popover-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+  cursor: move;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-color: #7F7F7F;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  background-color: #eee; }
+  .igv-popover-header div {
+    margin-right: 4px;
+    height: 12px;
+    width: 12px;
+    color: #7F7F7F; }
+  .igv-popover-header div:hover {
+    cursor: pointer;
+    color: #444; }
+
+.igv-popover-track-popup-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-height: 384px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: white; }
+  .igv-popover-track-popup-content div {
+    margin-left: 4px;
+    background-color: white; }
+  .igv-popover-track-popup-content div:hover {
+    cursor: pointer;
+    background-color: #efefef; }
+
+.igv-popover-name-value {
+  cursor: default;
+  text-wrap: none;
+  white-space: nowrap;
+  max-width: 384px; }
+
+.igv-popover-name {
+  font-weight: bold;
+  padding-right: 4px;
+  float: left; }
+
+.igv-popover-value {
+  padding-left: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 256px;
+  display: inline-block; }
+
+.igv-trackgear-container {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+  color: #7F7F7F; }
+
+.igv-trackgear-container:hover {
+  cursor: pointer;
+  color: #444; }
+
+.igv-trackgear-popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 132px;
+  z-index: 4096;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  font-weight: 400;
+  color: #4b4b4b;
+  background: white;
+  border-radius: 4px;
+  border-color: #7F7F7F;
+  border-style: solid;
+  border-width: thin;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: left; }
+  .igv-trackgear-popover > div:not(:first-child) {
+    width: 100%; }
+    .igv-trackgear-popover > div:not(:first-child) > div {
+      background: white; }
+    .igv-trackgear-popover > div:not(:first-child) > div:last-child {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-bottom-color: transparent;
+      border-bottom-style: solid;
+      border-bottom-width: thin; }
+    .igv-trackgear-popover > div:not(:first-child) > div:hover {
+      background: #efefef; }
+
+.igv-trackgear-popover-shim {
+  padding-left: 8px;
+  padding-right: 8px; }
+
+.igv-trackgear-popover-header {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  cursor: move;
+  border-top-color: transparent;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-color: #7F7F7F;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  background-color: #eee;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center; }
+  .igv-trackgear-popover-header div {
+    margin-right: 4px;
+    height: 12px;
+    width: 12px;
+    color: #7F7F7F; }
+  .igv-trackgear-popover-header div:hover {
+    cursor: pointer;
+    color: #444; }
+
+.igv-trackgear-popover-check-container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+  background-color: transparent; }
+  .igv-trackgear-popover-check-container div {
+    padding-top: 2px;
+    padding-left: 8px; }
+  .igv-trackgear-popover-check-container div:first-child {
+    position: relative;
+    width: 12px;
+    height: 12px; }
+    .igv-trackgear-popover-check-container div:first-child svg {
+      position: absolute;
+      width: 12px;
+      height: 12px; }
+
+.igvControlDiv {
+  position: relative; }
+
+.igv-content-header {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  height: 16px;
+  width: 100%; }
+  .igv-content-header .igv-ideogram-shim {
+    height: 100%;
+    width: 50px;
+    background-color: white; }
+  .igv-content-header .igv-ideogram-content {
+    height: 100%;
+    background-color: white; }
+  .igv-content-header .igv-ideogram-content-border-right {
+    border-right-color: #292929;
+    border-right-style: solid;
+    border-right-width: 1px; }
+
+.igv-multi-locus-panel-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background-color: green;
+  border-right-color: #ff0000;
+  border-right-style: solid;
+  border-right-width: 1px; }
+
+.igv-navbar {
+  position: relative;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #444;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  height: 32px;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: thin;
+  border-color: #bfbfbf;
+  background-color: #f3f3f3; }
+
+.igv-nav-bar-left-container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  line-height: 32px; }
+  .igv-nav-bar-left-container .igv-logo {
+    width: 34px;
+    height: 32px;
+    margin-top: 6px;
+    margin-right: 8px; }
+  .igv-nav-bar-left-container .igv-current-genome {
+    height: 32px;
+    width: 40px;
+    margin-left: 4px;
+    margin-right: 4px;
+    user-select: none;
+    line-height: 32px;
+    vertical-align: middle;
+    text-align: center; }
+
+.igv-nav-bar-genomic-location {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; }
+
+.igv-chromosome-select-widget-container {
+  height: 100%;
+  width: 125px;
+  margin-right: 4px;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center; }
+  .igv-chromosome-select-widget-container select {
+    display: block;
+    cursor: pointer;
+    width: 100px;
+    height: 75%;
+    outline: none;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400; }
+
+.igv-locus-size-group {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 8px;
+  height: calc(32px - 10px); }
+  .igv-locus-size-group .igv-search-container {
+    width: 200px;
+    height: calc(32px - 10px);
+    line-height: calc(32px - 10px);
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+    .igv-locus-size-group .igv-search-container input {
+      cursor: text;
+      width: 85%;
+      height: calc(32px - 10px);
+      line-height: calc(32px - 10px);
+      font-size: 12px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      text-align: left;
+      padding-left: 8px;
+      margin-right: 8px;
+      outline: none;
+      border-style: solid;
+      border-radius: 3px;
+      border-width: thin;
+      border-color: #bfbfbf;
+      background-color: white; }
+    .igv-locus-size-group .igv-search-container div {
+      cursor: pointer;
+      height: 16px;
+      width: 16px; }
+  .igv-locus-size-group .igv-windowsizepanel-content-div {
+    margin-left: 4px;
+    user-select: none; }
+
+.igv-nav-bar-right-container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  line-height: 32px; }
+  .igv-nav-bar-right-container .igv-nav-bar-toggle-button-container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; }
+    .igv-nav-bar-right-container .igv-nav-bar-toggle-button-container div {
+      margin-left: 0;
+      margin-right: 4px; }
+    .igv-nav-bar-right-container .igv-nav-bar-toggle-button-container div:last-child {
+      margin-left: 0;
+      margin-right: 0; }
+  .igv-nav-bar-right-container .igv-nav-bar-toggle-button-container-750 {
+    display: none; }
+  .igv-nav-bar-right-container .igv-zoom-widget {
+    color: #737373;
+    font-size: 18px;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 8px;
+    user-select: none;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center; }
+    .igv-nav-bar-right-container .igv-zoom-widget div {
+      cursor: pointer;
+      margin-left: unset;
+      margin-right: unset; }
+    .igv-nav-bar-right-container .igv-zoom-widget div:first-child {
+      height: 24px;
+      width: 24px;
+      margin-left: unset;
+      margin-right: 8px; }
+    .igv-nav-bar-right-container .igv-zoom-widget div:last-child {
+      height: 24px;
+      width: 24px;
+      margin-left: 8px;
+      margin-right: unset; }
+    .igv-nav-bar-right-container .igv-zoom-widget div:nth-child(even) {
+      display: block;
+      height: fit-content; }
+    .igv-nav-bar-right-container .igv-zoom-widget input {
+      display: block;
+      width: 125px; }
+    .igv-nav-bar-right-container .igv-zoom-widget svg {
+      display: block; }
+  .igv-nav-bar-right-container .igv-zoom-widget-900 {
+    color: #737373;
+    font-size: 18px;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 8px;
+    user-select: none;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center; }
+    .igv-nav-bar-right-container .igv-zoom-widget-900 div {
+      cursor: pointer;
+      margin-left: unset;
+      margin-right: unset; }
+    .igv-nav-bar-right-container .igv-zoom-widget-900 div:first-child {
+      height: 24px;
+      width: 24px;
+      margin-left: unset;
+      margin-right: 8px; }
+    .igv-nav-bar-right-container .igv-zoom-widget-900 div:last-child {
+      height: 24px;
+      width: 24px;
+      margin-left: 8px;
+      margin-right: unset; }
+    .igv-nav-bar-right-container .igv-zoom-widget-900 div:nth-child(even) {
+      width: 0;
+      height: 0;
+      display: none; }
+    .igv-nav-bar-right-container .igv-zoom-widget-900 input {
+      width: 0;
+      height: 0;
+      display: none; }
+    .igv-nav-bar-right-container .igv-zoom-widget-900 svg {
+      display: block; }
+  .igv-nav-bar-right-container .igv-zoom-widget-hidden {
+    display: none; }
+
+.igv-nav-bar-button {
+  box-sizing: unset;
+  padding-left: 6px;
+  padding-right: 6px;
+  height: 18px;
+  text-transform: capitalize;
+  user-select: none;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 200;
+  color: #737373;
+  background-color: #f3f3f3;
+  border-color: #737373;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 6px; }
+
+.igv-nav-bar-button-clicked {
+  color: white;
+  background-color: #737373; }
+
+.igv-nav-bar-button:hover {
+  cursor: pointer; }
+
+.igv-logo-nonav {
+  margin-left: 4px;
+  margin-top: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 16px; }
+
+.igv-search-results {
+  position: absolute;
+  top: 32px;
+  left: 2px;
+  height: 320px;
+  width: 213px;
+  background-color: white;
+  border-color: #7F7F7F;
+  border-style: solid;
+  border-width: thin;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 9999; }
+  .igv-search-results tr {
+    font-family: "Open Sans", sans-serif;
+    font-size: small;
+    font-weight: 400;
+    color: #444; }
+  .igv-search-results tr:hover,
+  .igv-search-results tr:focus,
+  .igv-search-results tr:active {
+    cursor: pointer;
+    font-weight: 700;
+    color: #141414; }
+
+.igv-root-div {
+  position: relative;
+  left: 0;
+  right: 0;
+  height: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 4px; }
+
+.igv-content-div {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.igv-track-container-div {
+  user-select: none;
+  position: relative;
+  clear: both; }
+
+.igv-track-div {
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.igv-viewport-container {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  height: 100%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+.igv-viewport-div {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+.igv-viewport-content-div {
+  position: absolute;
+  width: 100%; }
+
+.igv-viewport-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.15);
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  user-select: none; }
+
+.igv-whole-genome-container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-color: white; }
+  .igv-whole-genome-container div {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: #444;
+    height: 100%;
+    text-align: center;
+    border-right-color: #bfbfbf;
+    border-right-style: solid;
+    border-right-width: thin; }
+    .igv-whole-genome-container div span {
+      display: block;
+      padding-top: 6px;
+      text-overflow: ellipsis; }
+  .igv-whole-genome-container div:last-child {
+    border-right-color: transparent; }
+  .igv-whole-genome-container div:hover,
+  .igv-whole-genome-container div:focus,
+  .igv-whole-genome-container div:active {
+    cursor: pointer;
+    background-color: #efefef; }
+
+.igv-viewport-div-border-right {
+  border-right-color: #292929;
+  border-right-style: solid;
+  border-right-width: 1px; }
+
+.igv-multi-locus-panel-close-container {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  color: #666666;
+  z-index: 1000; }
+
+.igv-multi-locus-panel-close-container:hover {
+  cursor: pointer;
+  color: #434343; }
+
+.igv-multi-locus-panel-label-div {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -25%);
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  min-width: 16px;
+  z-index: 64;
+  color: #373737;
+  background-color: white;
+  padding: 1px; }
+
+.igv-multi-locus-panel-label-div:hover {
+  cursor: pointer; }
+
+.igv-viewport-ruler {
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 200;
+  text-align: center; }
+  .igv-viewport-ruler > div {
+    height: 100%; }
+
+.igv-viewport-sequence {
+  font-family: "Open Sans", sans-serif;
+  font-size: 8px;
+  font-weight: 200;
+  text-align: center; }
+
+.igv-viewport-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1024;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  color: #737373; }
+
+.igv-ruler-sweeper-div {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: 99999;
+  background-color: rgba(68, 134, 247, 0.25); }
+
+.igv-right-hand-gutter {
+  position: absolute;
+  right: 0;
+  width: 36px;
+  height: 100%;
+  background: white; }
+
+.igv-left-hand-gutter {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 100%; }
+  .igv-left-hand-gutter canvas {
+    position: absolute; }
+
+.igv-track-menu-border-top {
+  border-top-color: #a2a2a2;
+  border-top-style: solid;
+  border-top-width: thin; }
+
+.igv-track-menu-category {
+  padding-left: 4px;
+  font-weight: 400; }
+
+.igv-track-drag-scrim {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 256;
+  background-color: rgba(68, 134, 247, 0.25); }
+
+.igv-track-manipulation-handle {
+  cursor: pointer;
+  position: absolute;
+  right: 36px;
+  width: 12px;
+  margin-left: 2px;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: medium;
+  border-color: #c4c4c4;
+  border-style: solid;
+  border-width: thin;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  z-index: 512;
+  background-color: #c4c4c4; }
+
+.igv-track-manipulation-handle:hover,
+.igv-track-manipulation-handle:focus,
+.igv-track-manipulation-handle:active {
+  border-color: #7e7e7e;
+  background-color: #7e7e7e; }
+
+.igv-track-label {
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  font-weight: 400;
+  text-align: center;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  border-color: #444;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: thin;
+  background-color: white;
+  z-index: 128;
+  cursor: pointer; }
+
+.igv-track-label:hover,
+.igv-track-label:focus,
+.igv-track-label:active {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.igv-scrollbar-outer-div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 100%;
+  background-color: white; }
+  .igv-scrollbar-outer-div div {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    width: 8px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #c4c4c4;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: white; }
+  .igv-scrollbar-outer-div div:hover,
+  .igv-scrollbar-outer-div div:focus,
+  .igv-scrollbar-outer-div div:active {
+    cursor: pointer;
+    background-color: #c4c4c4; }
+
+.zoom-in-notice-container {
+  position: absolute;
+  top: 10px;
+  left: 50%; }
+  .zoom-in-notice-container div {
+    position: relative;
+    left: -50%;
+    font-family: "Open Sans", sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    color: #3f3f3f;
+    background-color: rgba(255, 255, 255, 0.51);
+    z-index: 64; }
+
+.igv-center-guide {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 8px;
+  z-index: 8;
+  display: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  border-left-style: dashed;
+  border-left-width: thin;
+  border-right-style: dashed;
+  border-right-width: thin; }
+
+.igv-center-guide-wide {
+  background-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(127, 127, 127, 0.51);
+  border-right-color: rgba(127, 127, 127, 0.51); }
+
+.igv-center-guide-thin {
+  left: 50%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(127, 127, 127, 0.51);
+  border-right-color: rgba(0, 0, 0, 0);
+  /*background-color: rgba(127, 127, 127, 0.51);*/
+  /*border-left-color: rgba(0,0,0,0);*/
+  /*border-right-color: rgba(0,0,0,0);*/ }
+
+.igv-cursor-tracking-guide {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  z-index: 1;
+  border-left-style: dotted;
+  border-left-width: thin;
+  border-left-color: rgba(127, 127, 127, 0.76);
+  display: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none; }
+
+.igv-clickable {
+  cursor: pointer;
+  background-color: white; }
+
+#color-by-tag {
+  color: #444; }
+
+#color-by-tag:hover,
+#color-by-tag:focus,
+#color-by-tag:active {
+  cursor: pointer;
+  padding-left: 2px;
+  padding-right: 2px;
+  color: white;
+  border-color: #444;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: thin;
+  background-color: #7f7f7f; }
+
+.igv-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.igv-spinner-container {
+  color: #3f3f3f;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 24px;
+  z-index: 512; }
+
+.igv-fa-check-visible {
+  color: inherit;
+  padding-right: 2px; }
+
+.igv-fa-check-hidden {
+  color: transparent;
+  padding-right: 2px; }
+
+.validateTips {
+  border: 1px solid transparent;
+  padding: 0.3em; }
+  .validateTips fieldset {
+    border: 0; }
+
+.igv-spacer-10 {
+  height: 10px;
+  width: 100%;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block; }
+
+/*# sourceMappingURL=igv.css.map */
+
+/*!
+ * Font Awesome Free 5.0.8 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+svg:not(:root).svg-inline--fa5 {
+  overflow: visible;
+  }
+
+.svg-inline--fa5 {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em; }
+  .svg-inline--fa5.fa5-lg {
+    vertical-align: -.225em; }
+  .svg-inline--fa5.fa5-w-1 {
+    width: 0.0625em; }
+  .svg-inline--fa5.fa5-w-2 {
+    width: 0.125em; }
+  .svg-inline--fa5.fa5-w-3 {
+    width: 0.1875em; }
+  .svg-inline--fa5.fa5-w-4 {
+    width: 0.25em; }
+  .svg-inline--fa5.fa5-w-5 {
+    width: 0.3125em; }
+  .svg-inline--fa5.fa5-w-6 {
+    width: 0.375em; }
+  .svg-inline--fa5.fa5-w-7 {
+    width: 0.4375em; }
+  .svg-inline--fa5.fa5-w-8 {
+    width: 0.5em; }
+  .svg-inline--fa5.fa5-w-9 {
+    width: 0.5625em; }
+  .svg-inline--fa5.fa5-w-10 {
+    width: 0.625em; }
+  .svg-inline--fa5.fa5-w-11 {
+    width: 0.6875em; }
+  .svg-inline--fa5.fa5-w-12 {
+    width: 0.75em; }
+  .svg-inline--fa5.fa5-w-13 {
+    width: 0.8125em; }
+  .svg-inline--fa5.fa5-w-14 {
+    width: 0.875em; }
+  .svg-inline--fa5.fa5-w-15 {
+    width: 0.9375em; }
+  .svg-inline--fa5.fa5-w-16 {
+    /* width: 1em; */
+    }
+  .svg-inline--fa5.fa5-w-17 {
+    width: 1.0625em; }
+  .svg-inline--fa5.fa5-w-18 {
+    width: 1.125em; }
+  .svg-inline--fa5.fa5-w-19 {
+    width: 1.1875em; }
+  .svg-inline--fa5.fa5-w-20 {
+    width: 1.25em; }
+  .svg-inline--fa5.fa5-pull-left {
+    margin-right: .3em;
+    width: auto; }
+  .svg-inline--fa5.fa5-pull-right {
+    margin-left: .3em;
+    width: auto; }
+  .svg-inline--fa5.fa5-border {
+    height: 1.5em; }
+  .svg-inline--fa5.fa5-li {
+    width: 2em; }
+  .svg-inline--fa5.fa5-fw {
+    width: 1.25em; }
+
+.fa5-layers svg.svg-inline--fa5 {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.fa5-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -.125em;
+  width: 1em; }
+  .fa5-layers svg.svg-inline--fa5 {
+    -webkit-transform-origin: center center;
+            transform-origin: center center; }
+
+.fa5-layers-text, .fa5-layers-counter {
+  display: inline-block;
+  position: absolute;
+  text-align: center; }
+
+.fa5-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center; }
+
+.fa5-layers-counter {
+  background-color: #ff253a;
+  border-radius: 1em;
+  color: #fff;
+  height: 1.5em;
+  line-height: 1;
+  max-width: 5em;
+  min-width: 1.5em;
+  overflow: hidden;
+  padding: .25em;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right; }
+
+.fa5-layers-bottom-right {
+  bottom: 0;
+  right: 0;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right; }
+
+.fa5-layers-bottom-left {
+  bottom: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left; }
+
+.fa5-layers-top-right {
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right; }
+
+.fa5-layers-top-left {
+  left: 0;
+  right: auto;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top left;
+          transform-origin: top left; }
+
+.fa5-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -.0667em; }
+
+.fa5-xs {
+  font-size: .75em; }
+
+.fa5-sm {
+  font-size: .875em; }
+
+.fa5-1x {
+  font-size: 1em; }
+
+.fa5-2x {
+  font-size: 2em; }
+
+.fa5-3x {
+  font-size: 3em; }
+
+.fa5-4x {
+  font-size: 4em; }
+
+.fa5-5x {
+  font-size: 5em; }
+
+.fa5-6x {
+  font-size: 6em; }
+
+.fa5-7x {
+  font-size: 7em; }
+
+.fa5-8x {
+  font-size: 8em; }
+
+.fa5-9x {
+  font-size: 9em; }
+
+.fa5-10x {
+  font-size: 10em; }
+
+.fa5-fw {
+  text-align: center;
+  width: 1.25em; }
+
+.fa5-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0; }
+  .fa5-ul > li {
+    position: relative; }
+
+.fa5-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit; }
+
+.fa5-border {
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+  padding: .2em .25em .15em; }
+
+.fa5-pull-left {
+  float: left; }
+
+.fa5-pull-right {
+  float: right; }
+
+.fa5.fa5-pull-left,
+.fas.fa5-pull-left,
+.far.fa5-pull-left,
+.fal.fa5-pull-left,
+.fab.fa5-pull-left {
+  margin-right: .3em; }
+
+.fa5.fa5-pull-right,
+.fas.fa5-pull-right,
+.far.fa5-pull-right,
+.fal.fa5-pull-right,
+.fab.fa5-pull-right {
+  margin-left: .3em; }
+
+.fa5-spin {
+  -webkit-animation: fa5-spin 2s infinite linear;
+          animation: fa5-spin 2s infinite linear; }
+
+.fa5-pulse {
+  -webkit-animation: fa5-spin 1s infinite steps(8);
+          animation: fa5-spin 1s infinite steps(8); }
+
+@-webkit-keyframes fa5-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes fa5-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.fa5-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+.fa5-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.fa5-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg); }
+
+.fa5-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1); }
+
+.fa5-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1); }
+
+.fa5-flip-horizontal.fa5-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1); }
+
+:root .fa5-rotate-90,
+:root .fa5-rotate-180,
+:root .fa5-rotate-270,
+:root .fa5-flip-horizontal,
+:root .fa5-flip-vertical {
+  -webkit-filter: none;
+          filter: none; }
+
+.fa5-stack {
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  width: 2em; }
+
+.fa5-stack-1x,
+.fa5-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.svg-inline--fa5.fa5-stack-1x {
+  height: 1em;
+  width: 1em; }
+
+.svg-inline--fa5.fa5-stack-2x {
+  height: 2em;
+  width: 2em; }
+
+.fa5-inverse {
+  color: #fff; }
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+  </style>
+  <script src="./assets/js/igv.min.js"></script>
+  <style>
+    .full-screen-active {
+      z-index: 9999;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .close-full-screen.btn-default {
+      height: 30px;
+      position: fixed;
+      right: 50px;
+      top: 20px;
+      z-index: 99999;
+      opacity: 0;
+    }
+
+    .close-full-screen.btn-default.active {
+      opacity: 1;
+    }
+
+    .close-icon {
+      border: 1px solid transparent;
+      background-color: transparent;
+      display: inline;
+      vertical-align: middle;
+      outline: 0;
+      cursor: pointer;
+      z-index: 1;
+      position: relative;
+      padding-left: 1px;
+      padding-right: 1px;
+      margin-bottom: 12px;
+
+    }
+
+    .close-icon:after {
+      content: "X";
+      display: block;
+      width: 15px;
+      height: 15px;
+      /* position: absolute; */
+      color: #000;
+      z-index: 1;
+      /* right: 35px;
+	top: 0;
+	bottom: 0; 
+	  margin-right: 20px;*/
+      padding: 2px;
+      /* border-radius: 50%; */
+      text-align: center;
+      font-weight: bold;
+      font-size: 12px;
+      /* box-shadow: 0 0 2px #E50F0F; */
+      cursor: pointer;
+      z-index: 100;
+    }
+  </style>
+  <style>
+    .diag_container{
+      position: relative;
+    }
+    .p1_sum_loader{
+      height:100%;
+      position: absolute;
+      left:45%;
+      top:80px;
+    }
+  </style>
+  <title>Genome Explorer</title>
+
+<!-- self feeded --> 
+   
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+
+
+
+
+
+
+
+<body class="geapp" data-new-gr-c-s-check-loaded="14.1089.0" data-gr-ext-installed="" data-select2-id="5"><div id="WzTtDiV" style="visibility: hidden; position: absolute; overflow: hidden; padding: 0px; width: 0px; left: 0px; top: 0px;"></div>
+  
+  
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" data-select2-id="4">
+      <a class="hamburger-block hamburger-menu introduction-farm" data-intro="Hamburger menu uses to navigate and to do the analysis, view report and order sequence" data-step="4" href="#"><span id="sidaNavToggle" class="hamburger">☰</span></a>
+      <a class="navbar-brand introduction-farm" data-intro="Genome Explorer an intelligent genomics platform for precision medicine" data-step="1" href="#">Genome <span>Explorer</span><sup>®</sup></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse1">
+        <ul class="navbar-nav mr-auto patient-search" data-select2-id="62">
+
+
+<!--   header selector   -->          
+          <li class="nav-item active" >
+            <label for="patientSelect" class="control-label">Search by
+              <span><i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" style="color: #a6c5e0;" data-bs-original-title="Search by unique patient identifier, cohort ID and clinical trials ID." aria-label="Search by unique patient identifier, cohort ID and clinical trials ID."></i></span>
+            </label>
+            <select id="patientSelect" class="form-select">
+              <option value="newborn">New Born</option>
+              <option value="cohort">Cohort</option>
+              <option value="patient">Patient ID</option>
+              <option value="trio">Family</option>
+              <option value="clinicalTrials">Clinical Trials</option>
+              <option value="cohortLite">Cohort Lite</option>
+              
+            </select>
+          </li>
+          <li class="nav-item patient-input-container">
+            <label for="queryby" class="control-label">New born ID <span><i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" style="color: #a6c5e0;" data-bs-original-title="Select the desired cohort" aria-label="Select the desired cohort"></i></span></label>
+            <select class="form-control auto-select-input select2-hidden-accessible" id="patientInput" data-select2-id="patientInput" tabindex="-1" aria-hidden="true">
+              <option value="Cystic fibrosis" selected="" data-select2-id="2">Cystic fibrosis</option>
+              </select>
+           
+          </li>
+<!--  header selector end-->          
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="form-inline mt-2 mt-md-0 ge-header-side-menu">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#aboutContent" aria-expanded="false" aria-controls="aboutContent">About</button>
+            </li>
+            <li class="nav-item menu-howto">
+              <button type="button" class="btn btn-success introduction-farm how-to-btn" data-bs-toggle="collapse" data-intro="How to guides you to use Genome Explorer functionalities" data-step="2" data-bs-target="#grad">How to</button>
+            </li>
+            <li class="nav-item"><button class="btn btn-info" id="voice-cmd" title="voice search"><i class="fa-solid fa-microphone"></i></button></li>
+            <li class="nav-item"><button class="btn btn-info" id="voiceMute" title="Enable voice"><i class="fa-solid fa-volume-high"></i></button></li>
+
+            <li class="nav-item menu-connect-ehr">
+              <button type="button" class="btn btn-primary navconnEHR connEHR introduction-farm" data-intro="Connect to EHR used to connect and get the patient Information" data-step="3" data-bs-toggle="collapse" dt-text="" data-bs-target="#grad">Connect to EHR</button>
+            </li>
+            <li class="nav-item user-profile dropdown">
+              <a class="page-scroll dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="javascript:void(0);" title="GE Dev Profile Settings">
+                              <img src="https://gedevbucket.s3.amazonaws.com/app/17/profile/Senapathy_Periannan.png" class="rounded-circle" width="32px" height="32px">
+                            </a>
+              <ul class="dropdown-menu float-end">
+                <h5 id="changeUser">Logged in as <span id="user_role">Senapathy Periannan</span></h5>
+                <li role="separator" class="divider"></li>
+                <li><a href="#" title="profile" id="btnProfile">Profile</a></li>
+                <li><a href="#" title="Logout" id="btnlogout" data-userid="17" data-roleid="2" data-department="" data-lname="Periannan" data-full-name="Senapathy Periannan" data-fname="Senapathy" data-email-id="senapathy@genome.com">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="app-content-section ">
+    <div class="containter-fluid">
+      <div class="row">
+        <div class="col col-md-12">
+          <div class="collapse header-about-content" id="aboutContent">
+            <div class="card card-body">
+              <p>Genome Explorer® is a comprehensive cloud-based clinical genomics platform, which enables precision medicine through evidence-based genomic assessment of cancers and inherited disorders. It is an enterprise genomics software system to analyze and interpret sequence data from Illumina and Ion torrent sequencing platforms and supports major analysis pipelines including whole-genome sequencing, whole-exome sequencing, targeted gene panel analysis, pharmacogenomics, gene fusions, CNVs, SVs and TMB/MSI analysis. It is a comprehensive platform with automated workflows that provides innovative, cost-effective, and readily accessible Clinical Decision Support (CDS) simply from a web browser. Genome Explorer® incorporates the standard practice guidelines from AMP, ACMG, CAP, and NCCN for interpreting and reporting the sequence variants. The actionable clinical report includes drugs approved by FDA, EMA, HCSC and PMDA, clinical trials, drug dosage, side effects, and drug-metabolizing phenotypes as per CPIC guidelines.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-md-12 app-content-block ">
+          <!----- block Header -->
+          <div class="row">
+            <div class="col col-md-12 app-content-header">
+              <div class="ge-with-pat hidden" style="display: none;">
+                <ul class="pat-details nav justify-content-center" style="display: none;">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                      <i class="fa-solid fa-circle-info show-pop-AnalysisInfo" data-content=""></i>
+                      <i class="fa-solid fa-user-tag show-pop-patientMeta" data-content=""></i>
+                      &nbsp;Patient ID: <span class="pat-meta" dt-data="Patient_Id">-</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Last Name: <span class="pat-meta" dt-data="Last_Name">-</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Middle Name: <span class="pat-meta" dt-data="Middle_name">-</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">First Name: <span class="pat-meta" dt-data="First_Name">-</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Gender: <span class="pat-meta" dt-data="Gender">-</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">DOB: <span class="pat-meta" dt-data="Date_of_Birth">-</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Primary Diagnosis: <span class="pat-meta" id="originalDisease" dt-data="originalDisease">-</span></a>
+                  </li>
+                  <li class="nav-item" id="secondaryDiagnosisDisease">
+                    <a class="nav-link" href="#">Secondary Diagnosis: <span class="pat-meta" id="diseaseF" dt-data="Disease">-</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="ge-without-pat" dt-voice-text="">
+                <div class="welcome-content-header" style="display: none;" dt-voice-text="Welcome Senapathy Periannan to Genome Explorer"><h4>Welcome Senapathy Periannan to Genome <span style="color: #b0cb2e;">Explorer</span><sup>®</sup></h4>
+        <p>Order your patients genomic tests and review the reports</p></div>
+                <div class="cohort-content-header">
+                  <div class="cohort-content-main-header"><h4>Newborn Reports</h4></div>
+                  <div class="" id="cohortMeta">
+                    <div class="row form-group">
+                      <div class="" style="display:none">
+                        <label for="">Disease</label>
+                        <h4 id="cohortNameMeta" data-content="<div id=&quot;cohortDesc&quot;>
+                                <div class=&quot;co-data-info&quot;>
+                                  Description: Comprehensive molecular profiling of lung adenocarcinoma.
+                                </div>
+                                <div class=&quot;co-data-info&quot;>
+                                  Objective: Molecular profiling of 230 resected lung adenocarcinomas using messenger RNA, microRNA and DNA sequencing integrated with copy number, methylation and proteomic analyses to determine the statistically significant mutated genes and the pathways affected. The data introduced the establishment of a foundation for classification and further investigations of lung adenocarcinoma molecular pathogenesis.
+                                </div>
+                              </div>">Lung Adenocarcinoma Cohort</h4>
+                      </div>
+
+                      <div class="col-md-12 text-right co-data-info">
+                        <ul class="nav justify-content-center">
+                          <li class="nav-item">
+                            <label for="">Disease</label>
+                            <h5 id="newbornNameMetaDisease">disease</h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Sequence Type</label>
+                            <h5 id="seqType">WES</h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Patients</label>
+                            <h5 id="newbornPatCount">223</h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Samples</label>
+                            <h5 id="newbornSampCount">0</h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Mutations</label>
+                            <h5 id="newbornPatVariantCount">72,012</h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Mutated Genes</label>
+                            <h5 id="uniqueMutatedGenes">15,132</h5>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="row form-group" style="visibility: hidden;display: none;">
+                      <div class="col-md-1 text-right">
+                        <label for="">Cohort Group </label>
+                      </div>
+                      <div class="col-md-3">
+                        <select name="" id="cohortReportSelection" class="form-control"><option value="CO-DLON" dt-name="ALL Patients Vs All Genes Analysis" dt-url="https://d1hf8ajhua2dre.cloudfront.net/cohort/COH001507/cohort_report_CO-DLON.json">ALL Patients Vs All Genes Analysis</option></select>
+                      </div>
+                      <div class="col-md-8 text-right co-data-info">
+                        <ul class="nav justify-content-end">
+                          <li class="nav-item">
+                            <label for="" id="cohortReportPName">No. of Patients</label>
+                            <h5 id="cohortReportGroupPatientCount">-</h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="" id="cohortReportGroupName">No. of Samples</label>
+                            <h5 id="cohortReportGroupNameCount">-</h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="" id="cohortReportGeneName">No. of Genes</label>
+                            <h5 id="cohortReportGeneCount">-</h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Created on</label>
+                            <h5 id="cohortReportDate">-</h5>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="trio-content-header" style="display: none;">
+                  <h4>
+                    Family Genomics <i class="fa-solid fa-circle-info" style="font-family: 'Font Awesome 5 Free';font-weight: 900;font-size: 16px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="The family analysis module facilitates in ascertaining the inheritance pattern of deleterious mutations that are causal for the disease and carried across the family members. This genomic pedigree analysis module provides a data-driven research and comparative genomic analysis to discover disease-associated genes within a family." aria-label="The family analysis module facilitates in ascertaining the inheritance pattern of deleterious mutations that are causal for the disease and carried across the family members. This genomic pedigree analysis module provides a data-driven research and comparative genomic analysis to discover disease-associated genes within a family."></i>
+                  </h4>
+                  <!-- <p>Genomic Pedigree Analysis Module</p> -->
+                  <div id="trioMeta">
+                    <div class="row form-group">
+                     <div class="col-md-12 text-right co-data-info">
+                        <ul class="nav justify-content-center">
+                          <li class="nav-item">
+                            <label for="">Disease</label>
+                            <h5 id="trioMetaDisease"></h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Sequence Type</label>
+                            <h5 id="trioMetaSequenceType"></h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Patients</label>
+                            <h5 id="trioPatCount"></h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Samples</label>
+                            <h5 id="trioSampCount"></h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Mutations</label>
+                            <h5 id="trioPatVariantCount"></h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Mutated Genes</label>
+                            <h5 id="uniqueMutatedGenes-trio"></h5>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clinicalTrial-content-header" style="display: none;">
+                  <h4>Clinical Trial Genomics</h4>
+                  <div id="ctrailMeta" style="margin-top: 5px;">
+                    <div class="row form-group">
+                      <div class="" style="display:none">
+                        <label for="">Disease</label>
+                        <h4 id="ctrailMetaName"></h4>
+                      </div>
+
+                      <div class="col-md-12 text-right co-data-info">
+                        <ul class="nav justify-content-center">
+                          <li class="nav-item">
+                            <label for="">Disease</label>
+                            <h5 id="ctrailMetaDisease"></h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Selected Drug</label>
+                            <h5 id="ctrailSelectedDrug"></h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Sequence Type</label>
+                            <h5 id="ctrailSeqType"></h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Patients</label>
+                            <h5 id="ctrailPatCount"></h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Mutations</label>
+                            <h5 id="ctrailPatVariantCount"></h5>
+                          </li>
+                          <li class="nav-item">
+                            <label for="">Mutated Genes</label>
+                            <h5 id="ctrailUniqueMutatedGenes"></h5>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row report-breadcrumb">
+                <div class="form-group col-md-8">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb"></ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----App content---->
+          <div class="row">
+            <div class="app-content-autoheight col scrollbar-inner">
+              <div class="row" style="display:none;">
+                <div class="form-group col-md-4" style="margin-top:10px;">
+                  <select id="reportList" class="form-control analysis-list-menu" dt-template="welcome" style="display: none;"></select>
+                </div>
+                <div class="variant-stats-report col-md-8 text-right hidden" style="display: none;">
+                  <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                      <label for="" id="">All Variants</label>
+                      <h5 id="statAllCount"></h5>
+                    </li>
+                    <li class="nav-item">
+                      <label for="" id="">Drug Response</label>
+                      <h5 id="statDrugResCount"></h5>
+                    </li>
+                    <li class="nav-item">
+                      <label for="" id="">Pathogenic</label>
+                      <h5 id="statPathogenicCount"></h5>
+                    </li>
+                    <li class="nav-item">
+                      <label for="" id="">Likely Pathogenic</label>
+                      <h5 id="statLPCount"></h5>
+                    </li>
+                    <li class="nav-item">
+                      <label for="">VUS</label>
+                      <h5 id="statVus"></h5>
+                    </li>
+                    <li class="nav-item">
+                      <label for="">Others</label>
+                      <h5 id="statUnknownCount"></h5>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                    <label for="">Benign</label>
+                    <h5 id="statBenignCount"></h5>
+                  </li> -->
+
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 app-content"><!--App index.php content-->
+<div class="row">
+    <div class="app-content-autoheight col scrollbar-inner">
+        <div class="col-md-12 app-cohort-loading text-center" style="display: none;">
+            <img src="./assets/images/loader.gif">
+        </div>
+    </div>
+    <div class="col-md-12 text-center" id="app-cohort-status-info" style="display: none;"></div>
+    <div class="col-md-12 app-cohort" id="coh-app-content-dp" >
+  
+
+        <!-- Parent Tabs starts here-->
+        <div class="row">
+            <div class="col-md-12 app-content cohort-app-content">
+
+  <div class="row mt-3 mb-3">
+    <div class="col-md-12 text-center">
+      <ul class="nav nav-tabs breadcrum-enable justify-content-center" id="cohReport-nav-tab" role="tablist">
+        <li class="nav-item">
+          <button data-bs-target="#coh-clin-sum-cont" class="nav-link coh-report-load active" data-bs-toggle="tab" role="tab" aria-controls="coh-clunsum-tab" aria-selected="true" id="coh-clin-sum-tab">Clinical Summary <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-original-title="This section provides a summary of key diagnosis, therapeutics and pharmacogenomic information from a cohort analysis." aria-describedby="tooltip762070" data-bs-original-title=""></i>
+        </button></li>
+        <li class="nav-item">
+          <button data-bs-target="#co-clin-report-cont" class="nav-link coh-report-load" data-bs-toggle="tab" role="tab" aria-controls="coh-clinreport-tab" aria-selected="true" id="coh-clin-report-tab">Newborn Report <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-original-title="This section provides detailed reports from a cohort analysis." aria-describedby="tooltip762070" data-bs-original-title=""></i>
+        </button></li>
+      </ul>
+      <div class="tab-content cohort-page" id="cohort-clinical-report-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Summary page -->  
+
+<div class="tab-pane active" id="coh-clin-sum-cont" role="tabpanel" aria-labelledby="coh-clunsum-tab">
+  <section class="clinical-report-section clinical-30-block">
+  <div class="row">
+    <div class="col-md-10 offset-1">
+    <!--
+      4- CDS, RSE, ncRNA, GSV
+      <div class="row">
+        <div class="col-md-12 text-center 30-s-toggles-container">
+          <div class="diag-nav-toggle">
+            <span class="pheno-label">CDS</span>
+            <div class="form-check form-check-inline cds-toggle">
+              <div class="ui-switcher" aria-checked="true"></div><input class="form-check-input" type="checkbox" name="CDSToggle" value="yes" id="cds-toggle" checked="checked" style="display: none;">
+            </div>
+          </div>
+          <div class="diag-nav-toggle">
+            <span class="pheno-label">RSE</span>
+            <div class="form-check form-check-inline rse-toggle">
+              <div class="ui-switcher" aria-checked="true"></div><input class="form-check-input" type="checkbox" name="RSEToggle" value="yes" id="rse-toggle" checked="checked" style="display: none;">
+            </div>
+          </div>
+          <div class="diag-nav-toggle">
+            <span class="pheno-label">ncRNA</span>
+            <div class="form-groupcheck form-check-inline ncrna-toggle">
+              <div class="ui-switcher" aria-checked="false"></div><input class="form-check-input" type="checkbox" name="ncRNAToggle" value="yes" id="ncrna-toggle" disabled="disabled" style="display: none;">
+            </div>
+          </div>
+          <div class="diag-nav-toggle">
+            <span class="pheno-label">GSV</span>
+            <div class="form-check form-check-inline gsv-toggle">
+              <div class="ui-switcher" aria-checked="false"></div><input class="form-check-input" type="checkbox" name="GSVToggle" value="yes" id="gsv-toggle" disabled="disabled" style="display: none;">
+            </div>
+          </div>
+        </div>
+      </div>
+    -->
+      <div class="row" style="text-align:left;">
+        <div class="col module-30s">
+          <h3>Diagnosis <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="The diagnosis summary provides the disease-causing mutations spanned across coding, regulatory splice elements, and non-coding regions." aria-label="The diagnosis summary provides the disease-causing mutations spanned across coding, regulatory splice elements, and non-coding regions."></i></h3>
+          <div class="diagnosisMscroll os-host os-theme-dark os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-transition os-host-scrollbar-horizontal-hidden" style="height: 242px;overflow-y: scroll;"><div class="os-resize-observer-host observed"><div class="os-resize-observer" style="left: 0px; right: auto;"></div></div><div class="os-padding"><div class="os-viewport os-viewport-native-scrollbars-invisible"><div class="os-content" style="padding: 0px; height: 100%; width: 100%;">                        
+            <div class="thirty-diagnosis-variant-list"><div>
+                                <div class="therap-no-data-info" style="display: none;">
+                                  <p class="under-construction">Diagnosis information is not available</p>
+                                </div>
+                              </div>
+                              <div class="dia-30s thirty-cds-info ">
+                                <div class="cds-toggle-content diag_container">
+                       
+                                <table class="table table-sm table-striped dia-mutation cds-diagnosis-mutation Diagnosis">
+                                    <thead>
+                                      <tr>
+                                        <th>Gene</th>
+                                        <th>Mutation</th>
+                                        <th>Zygosys</th>
+                                      </tr>
+                                    </thead>
+                                    
+                                     <tbody>
+                                      <!-- Adding spinner -->
+                                    <div class="app-content-autoheight col scrollbar-inner p1_sum_loader">
+                                      <div class="col-md-12 text-center ">
+                                          <img src="./assets/images/loader.gif">
+                                      </div>
+                                    </div>
+                                    </tbody>
+                                  </table>
+                                
+                                </div>
+                              </div>
+                    
+                              </div>
+          </div></div></div>
+          <div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable"><div class="os-scrollbar-track os-scrollbar-track-off"><div class="os-scrollbar-handle" style="width: 100%; transform: translate(0px, 0px);"></div></div></div><div class="os-scrollbar os-scrollbar-vertical"><div class="os-scrollbar-track os-scrollbar-track-off"><div class="os-scrollbar-handle" style="height: 17.2119%; transform: translate(0px, 0px);"></div></div></div><div class="os-scrollbar-corner"></div></div>
+       
+        
+          </div> 
+          
+        </div>
+
+</section>
+<section class="clinical-report-section clinical-30-block sec-20-block">
+  <div class="row">
+    <div class="col-md-10 offset-1">
+      <div class="row">
+        <div class="col module-30s">
+          <h3>Summary </h3>
+          <div class="clinical-20s-content" id="content20s">
+            <ul>
+              <li style="text-align:left;"><span style="font-weight:bold;">Gene Involved: </span>Gene that causes mutations <span id="gene_inv"></span> are found to be frequently mutated in this new born,  indicated for <span id="disease"></span></li>
+              <li style="text-align:left;"><span style="font-weight:bold;">Mutation Involved: </span>Mutations involved in the gene  <span id="mut_inv"></span>.</li>
+              <li style="text-align:left;"><span style="font-weight:bold;">Zygosity Involved: </span>Zygosity for the mutatin <span id="zyg_inv"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>          
+
+</div>
+ 
+<!-- Summary page end --> 
+
+
+<!-- Report page -->
+<div class="tab-pane fade newborn_report" id="co-clin-report-cont" role="tabpanel" aria-labelledby="coh-clinreport-tab">
+  <div class="cohort-report-content">
+    <div class="row">
+      <!-- patient phenotype -->
+      <div>
+        <div class="col-md-12 text-end">
+          <h4>Patient Phenotype <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-original-title="This section outlines the frequently mutated genes which are significantly associated with the underlying disease.
+          " aria-describedby="tooltip762070" data-bs-original-title=""></i></h4>
+        </div>
+        <div class="col-md-10 offset-1 mb-3" id="SummaryReportSection">
+        <p style="text-align:justify;">Seizure; Lethargy; Hypertonia; Small for gestational age; Patent foramen ovale; Weight loss; Thrombocytopenia; Anemia;
+          Metabolic acidosis; Dehydration; Subarachnoid hemorrhage; EEG abnormality; Increased CSF lactate; Hyponatremia;
+          Lactic acidosis; Abdominal distention; Concern for molybdenum cofactor deficiency; Respiratory failure requiring
+          assisted ventilation; Feeding difficulties; Meconium stained amniotic fluid; Sepsis; Brain imaging abnormality
+          </p>
+        </div> 
+      </div>
+
+      <!-- patient phenotype end -->
+
+
+      <!-- Summary Report Table-->
+      <div class="col-md-12 mb-3" id="cohortAnalysisTableContainer">
+            <h4 style="text-transform:none !important;">Summary Report <i class="fa-solid fa-circle-info show-cohortReport-AnalysisInfo" data-content="<ul class=&quot;analysis-info&quot;><li><h5>Gene Symbol: </h5> <span> The affected gene symbol.</span></li><li><h5>Position: </h5> <span>Chromosomal position denoting a change in the nucleotide sequence.</span></li><li><h5>Affected Exon: </h5> <span> The affected exon</span></li><li><h5>HGVSc Syntax: </h5> <span> HGVS syntax of the mutation</span></li><li><h5>Amino Acid Changes: </h5> <span> Original and mutated amino acid</span></li><li><h5>Domains: </h5> <span> The affected domain of a protein</span></li><li><h5># of Patients: </h5> <span> The number of patients reported with the same mutation</span></li><li><h5># of Samples: </h5> <span> The number of samples reported with the same mutation</span></li><li><h5>Actionable Drugs: </h5> <span> The approved drugs targeted for the reported mutation.</span></li><li><h5>Pathways: </h5> <span> A genetic pathway affected by the mutation in the reported gene</span></li><li><h5>Variant Category: </h5> <span> Classification of variants based on its impact in causing disease</span></li><li><h5>Consequence: </h5> <span> The effect of the variant on the protein sequence.</span></li></ul>"></i></h4>
+            <p class="text-center">The <span class="rep_type"></span> summary report provides statistics of the top affected genes from the most frequent to the least frequent mutations occurring among the <span id="rep_type">Newborn</span>.</p>
+            <div class="col-md-12 text-center" id="cohRep-sum-stat-load" style="display: none;">
+                <img src="../assets/images/loader.gif">
+            </div>
+            <div class="col-md-12 text-center" id="cohRep-sum-stat-cont">
+              <div>
+                <table class="table display compact" id="summary_report_table">
+                  <thead>
+                    <tr style="background-color:lightblue;" role="row">
+                      <th class="sorting" tabindex="0">Gene</th>
+                      <th class="sorting" tabindex="0">Genomic Coordinates</th>
+                      <th class="sorting" tabindex="0">Condition</th>
+                      <th class="sorting" tabindex="0">Variant</th>
+                      <th class="sorting" tabindex="0">zygosity</th>
+                      <th class="sorting" tabindex="0">classificaton</th>
+                      <th class="sorting" tabindex="0">Patients</th>
+                      <th class="sorting" tabindex="0">Frequency</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <td>Gene</td>
+                      <td>Genomic Coordinates</td>
+                      <td>Condition</td>
+                      <td>Variant</td>
+                      <td>zygosity</td>
+                      <td>classificaton</td>
+                      <td>Patients</td>
+                      <td>Frequency</td>
+                    </tr>
+                  </tfoot>
+                </table>
+                <p> VUS: Variant of Uncertain Significance.</p>
+              </div>
+           <!--      <div id="cohortAnalysisTable_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="cohortAnalysisTable_length"><label>Show <select name="cohortAnalysisTable_length" aria-controls="cohortAnalysisTable" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="cohortAnalysisTable_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="cohortAnalysisTable"></label></div>
+               
+                <table class="table cohort-report-table cohort-rep-sum-table no-footer dataTable" id="cohortAnalysisTable" role="grid" aria-describedby="cohortAnalysisTable_info" style="width: 0px;">
+                    <thead>
+                      <tr style="background-color:lightblue;" role="row">
+                        <th class="sorting" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Gene Symbol: activate to sort column ascending" style="width: 0px;">Gene Symbol</th>
+                        <th class="sorting" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 0px;">Position</th>
+                        <th class="sorting" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Affected Exon: activate to sort column ascending" style="width: 0px;">Affected Exon</th>
+                        <th class="sorting" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="HGVSc Syntax: activate to sort column ascending" style="width: 0px;">HGVSc Syntax</th>
+                        <th class="sorting" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="AA Changes: activate to sort column ascending" style="width: 0px;">AA Changes</th>
+                        <th class="sorting" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Domains: activate to sort column ascending" style="width: 0px;">Domains</th>
+                        <th class="sorting" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="# Patients: activate to sort column ascending" style="width: 0px;"># Patients</th>
+                        <th class="sorting_desc" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="# Samples: activate to sort column ascending" style="width: 0px;" aria-sort="descending"># Samples</th>
+                        <th class="sorting" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Actionable Drugs: activate to sort column ascending" style="width: 0px;">Actionable Drugs</th>
+                        <th class="sorting" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Pathways: activate to sort column ascending" style="width: 0px;">Pathways</th>
+                        <th class="sorting" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Variant Category: activate to sort column ascending" style="width: 0px;">Variant Category</th>
+                        <th class="sorting" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Consequence: activate to sort column ascending" style="width: 0px;">Consequence</th></tr>
+                     <tr style="background-color:lightblue;" role="row" id="cohortAnalysisTableInputHead">
+                        <th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Gene Symbol: activate to sort column ascending" style="width: 0px;"><input class="header-search-report" type="text" placeholder="Search" dt-column="Gene Symbol"></th>
+                        <th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 0px;"><input class="header-search-report" type="text" placeholder="Search" dt-column="Position"></th><th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Affected Exon: activate to sort column ascending" style="width: 0px;"><input class="header-search-report" type="text" placeholder="Search" dt-column="Affected Exon"></th><th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="HGVSc Syntax: activate to sort column ascending" style="width: 0px;"><input class="header-search-report" type="text" placeholder="Search" dt-column="HGVSc Syntax"></th><th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="AA Changes: activate to sort column ascending" style="width: 0px;"><input class="header-search-report" type="text" placeholder="Search" dt-column="AA Changes"></th><th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Domains: activate to sort column ascending" style="width: 0px;"><input class="header-search-report" type="text" placeholder="Search" dt-column="Domains"></th><th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="# Patients: activate to sort column ascending" style="width: 0px;"><input class="header-search-report" type="text" placeholder="Search" dt-column="# Patients"></th><th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="# Samples: activate to sort column ascending" style="width: 0px;" aria-sort="descending"><input class="header-search-report" type="text" placeholder="Search" dt-column="# Samples"></th><th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Actionable Drugs: activate to sort column ascending" style="width: 0px;"><input class="header-search-report" type="text" placeholder="Search" dt-column="Actionable Drugs"></th><th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Pathways: activate to sort column ascending" style="width: 0px;"><input class="header-search-report" type="text" placeholder="Search" dt-column="Pathways"></th><th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Variant Category: activate to sort column ascending" style="width: 0px;"><input class="header-search-report" type="text" placeholder="Search" dt-column="Variant Category"></th><th class="" tabindex="0" aria-controls="cohortAnalysisTable" rowspan="1" colspan="1" aria-label="Consequence: activate to sort column ascending" style="width: 0px;"><input class="header-search-report" type="text" placeholder="Search" dt-column="Consequence"></th>
+                      </tr>
+                       
+                    </thead>
+                 -->   
+                 <!--   
+                    <tbody id="cohortAnalysisTbody">
+                      <tr role="row" class="odd">
+                          <td><span><a class="coh-viewGene" href="#" data-toggle="modal" data-target="#coh-GeneInfo" title="Gene Association Information" dt-gene="LATS2" dt-syn="LATS2">LATS2</a></span></td>
+                          <td style="word-wrap: break-word !important;">Chr13:21,562,482:C&gt;G
+                          </td>
+                          <td>4/8</td>
+                          <td><span title="ENST00000382592.4:c.1437G>C"> ENST00000382...</span></td>
+                          <td>p.Pro479=</td>
+                          <td><a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?uid=undefined" target="_blank">-</a></td>
+                          <td>3</td>
+                          <td class="sorting_1">3</td>
+                          <td>-</td>     
+                          <td><span title="Hippo signaling pathway"> Hippo signal...</span></td>  
+                          <td class="patvariant-category">pathogenic</td>
+                          <td>Silent</td>
+                        </tr><tr role="row" class="even">
+                          <td><span><a class="coh-viewGene" href="#" data-toggle="modal" data-target="#coh-GeneInfo" title="Gene Association Information" dt-gene="TP53" dt-syn="TP53">TP53</a></span></td>
+                          <td style="word-wrap: break-word !important;">Chr17:7,577,120:C&gt;A
+                          </td>
+                          <td>8/11</td>
+                          <td><span title="ENST00000269305.4:c.818G>T"> ENST00000269...</span></td>
+                          <td>p.Arg273Leu</td>
+                          <td><a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?uid=395699" target="_blank">P53</a></td>
+                          <td>3</td>
+                          <td class="sorting_1">3</td>
+                          <td>-</td>     
+                          <td><span title="MAPK/ERK signaling pathway, Neurotrophin signaling pathway, PI3K-Akt signaling pathway, Sphingolipid signaling pathway, RUNX3 regulates CDKN1A transcription, TP53 Regulates Transcription of DNA Repair Genes, TP53 Regulates Transcription of Death Receptors and Ligands, p53 signaling pathway, TP53 Regulates Transcription of Caspase Activators and Caspases, TP53 Regulates Transcription of Genes Involved in G1 Cell Cycle Arrest, Wnt signaling pathway, Thyroid hormone signaling pathway, TP53 Regulates Transcription of Genes Involved in Cytochrome C Release, Genome integrity, Cell Cycle Control: G1/S Checkpoint, TP53 Regulates Metabolic Genes, Cell Cycle Control: G2/M DNA Damage Checkpoint, Apoptosis, TP53 Regulates Transcription of Cell Death Genes"> MAPK/ERK sig...</span></td>  
+                          <td class="patvariant-category">pathogenic</td>
+                          <td>Missense</td>
+                        </tr><tr role="row" class="odd">
+                          <td><span><a class="coh-viewGene" href="#" data-toggle="modal" data-target="#coh-GeneInfo" title="Gene Association Information" dt-gene="FMN2" dt-syn="FMN2">FMN2</a></span></td>
+                          <td style="word-wrap: break-word !important;">Chr1:240,256,460:G&gt;T
+                          </td>
+                          <td>1/18</td>
+                          <td><span title="ENST00000319653.9:c.1051G>T"> ENST00000319...</span></td>
+                          <td>p.Glu351Ter</td>
+                          <td><a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?uid=undefined" target="_blank">-</a></td>
+                          <td>2</td>
+                          <td class="sorting_1">2</td>
+                          <td>-</td>     
+                          <td>-</td>  
+                          <td class="patvariant-category">pathogenic</td>
+                          <td>Nonsense</td>
+                        </tr><tr role="row" class="even">
+                          <td><span><a class="coh-viewGene" href="#" data-toggle="modal" data-target="#coh-GeneInfo" title="Gene Association Information" dt-gene="CNKSR2" dt-syn="CNKSR2">CNKSR2</a></span></td>
+                          <td style="word-wrap: break-word !important;">ChrX:21,624,984:C&gt;A
+                          </td>
+                          <td>19/22</td>
+                          <td><span title="ENST00000379510.3:c.2132C>A"> ENST00000379...</span></td>
+                          <td>p.Pro711Gln</td>
+                          <td><a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?uid=undefined" target="_blank">-</a></td>
+                          <td>2</td>
+                          <td class="sorting_1">2</td>
+                          <td>-</td>     
+                          <td>-</td>  
+                          <td class="patvariant-category">pathogenic</td>
+                          <td>Missense</td>
+                        </tr><tr role="row" class="odd">
+                          <td><span><a class="coh-viewGene" href="#" data-toggle="modal" data-target="#coh-GeneInfo" title="Gene Association Information" dt-gene="PCDHB8" dt-syn="PCDHB8">PCDHB8</a></span></td>
+                          <td style="word-wrap: break-word !important;">Chr5:140,558,614:C&gt;A
+                          </td>
+                          <td>1/1</td>
+                          <td><span title="ENST00000239444.2:c.999C>A"> ENST00000239...</span></td>
+                          <td>p.Thr333=</td>
+                          <td><a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?uid=394985" target="_blank">Cadherin</a></td>
+                          <td>2</td>
+                          <td class="sorting_1">2</td>
+                          <td>-</td>     
+                          <td>-</td>  
+                          <td class="patvariant-category">likely pathogenic</td>
+                          <td>Silent</td>
+                        </tr><tr role="row" class="even">
+                          <td><span><a class="coh-viewGene" href="#" data-toggle="modal" data-target="#coh-GeneInfo" title="Gene Association Information" dt-gene="MAFA" dt-syn="MAFA">MAFA</a></span></td>
+                          <td style="word-wrap: break-word !important;">Chr8:144,511,981:T&gt;G
+                          </td>
+                          <td>1/1</td>
+                          <td><span title="ENST00000333480.2:c.596A>C"> ENST00000333...</span></td>
+                          <td>p.His199Pro</td>
+                          <td><a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?uid=undefined" target="_blank">-</a></td>
+                          <td>2</td>
+                          <td class="sorting_1">2</td>
+                          <td>-</td>     
+                          <td><span title="Growth factor genes"> Growth facto...</span></td>  
+                          <td class="patvariant-category">likely pathogenic</td>
+                          <td>Missense</td>
+                        </tr><tr role="row" class="odd">
+                          <td><span><a class="coh-viewGene" href="#" data-toggle="modal" data-target="#coh-GeneInfo" title="Gene Association Information" dt-gene="CABLES1" dt-syn="CABLES1">CABLES1</a></span></td>
+                          <td style="word-wrap: break-word !important;">Chr18:20,716,021:G&gt;T
+                          </td>
+                          <td>1/10</td>
+                          <td><span title="ENST00000256925.7:c.295G>T"> ENST00000256...</span></td>
+                          <td>p.Gly99Cys</td>
+                          <td><a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?uid=undefined" target="_blank">-</a></td>
+                          <td>2</td>
+                          <td class="sorting_1">2</td>
+                          <td>-</td>     
+                          <td>-</td>  
+                          <td class="patvariant-category">pathogenic</td>
+                          <td>Missense</td>
+                        </tr><tr role="row" class="even">
+                          <td><span><a class="coh-viewGene" href="#" data-toggle="modal" data-target="#coh-GeneInfo" title="Gene Association Information" dt-gene="OR2T2" dt-syn="OR2T2">OR2T2</a></span></td>
+                          <td style="word-wrap: break-word !important;">Chr<span title="1:248,616,705:TGCTGCG>-"> 1:248,616,705:TGCTGC...</span>
+                          </td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>p.Cys204Ter</td>
+                          <td><a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?uid=394960" target="_blank">7tm_1</a></td>
+                          <td>2</td>
+                          <td class="sorting_1">2</td>
+                          <td>-</td>     
+                          <td>-</td>  
+                          <td class="patvariant-category">pathogenic</td>
+                          <td>Frame Shift Del</td>
+                        </tr><tr role="row" class="odd">
+                          <td><span><a class="coh-viewGene" href="#" data-toggle="modal" data-target="#coh-GeneInfo" title="Gene Association Information" dt-gene="KRTAP4-8" dt-syn="KRTAP4-8">KRTAP4-8</a></span></td>
+                          <td style="word-wrap: break-word !important;">Chr17:39,254,124:C&gt;G
+                          </td>
+                          <td>1/1</td>
+                          <td><span title="ENST00000333822.4:c.213G>C"> ENST00000333...</span></td>
+                          <td>p.Val71=</td>
+                          <td><a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?uid=366678" target="_blank">Keratin_B2</a></td>
+                          <td>2</td>
+                          <td class="sorting_1">2</td>
+                          <td>-</td>     
+                          <td>-</td>  
+                          <td class="patvariant-category">pathogenic</td>
+                          <td>Silent</td>
+                        </tr><tr role="row" class="even">
+                          <td><span><a class="coh-viewGene" href="#" data-toggle="modal" data-target="#coh-GeneInfo" title="Gene Association Information" dt-gene="TP53" dt-syn="TP53">TP53</a></span></td>
+                          <td style="word-wrap: break-word !important;">Chr17:7,579,592:T&gt;A
+                          </td>
+                          <td>-</td>
+                          <td><span title="ENST00000269305.4:c.97-2A>T"> ENST00000269...</span></td>
+                          <td>-</td>
+                          <td><a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?uid=undefined" target="_blank">-</a></td>
+                          <td>2</td>
+                          <td class="sorting_1">2</td>
+                          <td>-</td>     
+                          <td><span title="MAPK/ERK signaling pathway, Neurotrophin signaling pathway, PI3K-Akt signaling pathway, Sphingolipid signaling pathway, RUNX3 regulates CDKN1A transcription, TP53 Regulates Transcription of DNA Repair Genes, TP53 Regulates Transcription of Death Receptors and Ligands, p53 signaling pathway, TP53 Regulates Transcription of Caspase Activators and Caspases, TP53 Regulates Transcription of Genes Involved in G1 Cell Cycle Arrest, Wnt signaling pathway, Thyroid hormone signaling pathway, TP53 Regulates Transcription of Genes Involved in Cytochrome C Release, Genome integrity, Cell Cycle Control: G1/S Checkpoint, TP53 Regulates Metabolic Genes, Cell Cycle Control: G2/M DNA Damage Checkpoint, Apoptosis, TP53 Regulates Transcription of Cell Death Genes"> MAPK/ERK sig...</span></td>  
+                          <td class="patvariant-category">pathogenic</td>
+                          <td>Splice Site</td>
+                        </tr>
+                
+                      </tbody>
+              -->
+                
+            </table>
+          <!--   <div class="dataTables_info" id="cohortAnalysisTable_info" role="status" aria-live="polite">Showing 1 to 10 of 1,000 entries</div><div class="dataTables_paginate paging_simple_numbers" id="cohortAnalysisTable_paginate"><a class="paginate_button previous disabled" aria-controls="cohortAnalysisTable" data-dt-idx="0" tabindex="0" id="cohortAnalysisTable_previous">Previous</a><span><a class="paginate_button current" aria-controls="cohortAnalysisTable" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="cohortAnalysisTable" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="cohortAnalysisTable" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="cohortAnalysisTable" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="cohortAnalysisTable" data-dt-idx="5" tabindex="0">5</a><span class="ellipsis">…</span><a class="paginate_button " aria-controls="cohortAnalysisTable" data-dt-idx="6" tabindex="0">100</a></span><a class="paginate_button next" aria-controls="cohortAnalysisTable" data-dt-idx="7" tabindex="0" id="cohortAnalysisTable_next">Next</a></div></div>
+          -->    </div>
+      </div>
+    </div>
+      <!-- Summary Report Table end -->
+
+    <!-- Top Genes (Based On Mutation Frequency)  -->
+          <div class="row mt-3 tp-gns-bsd-on-mut-freq-hd coh-rep-hd">
+              <div class="col-md-12">
+                  <h4>Top Mutation (based on mutation frequency)</h4>
+              </div>
+          </div>
+          <div class="row tp-gns-bsd-on-mut-freq">
+            <!-- top-gene-table -->
+              <div class="col-md-6 coh-tableview4 ml-2">
+                  <p class="text-center mt-1 cohort-table-det">
+                      This section provides Top frequent Mutations among the Newborn.
+                  </p>
+                  <div class="col-md-12 col-sm-12 text-center coh-rep-ld" id="top-mut-freq-tbl-load" style="display: none;">
+                      <img src="../assets/images/loader.gif">
+                  </div>
+                  <div class="col-md-12 col-sm-12 text-center coh-rep-cont" id="top-mut-freq-tbl-cont">
+                    <table class="Top_gene_table table co-sum-data-table dataTable no-footer " id="reportTable" role="grid" aria-describedby="reportTable_info">
+                      <thead>
+                        <tr>
+                          <th>Gene</th>
+                          <th>Mutation</th>
+                          <th>Frequency</th>
+                        </tr>
+                      </thead>
+                    </table>  
+                  </div>          
+              </div>
+            <!-- top-gene-graph -->
+              <div class="col-md-6 coh-tableview4">
+                <p class="text-center mt-1 cohort-table-det">
+                    Graphical representation of Mutations based on its frequency.
+                </p>
+                <div class="col-md-12 col-sm-12 text-center coh-rep-ld" id="top-mut-freq-grp-load" style="display: none;">
+                    <img src="../assets/images/loader.gif">
+                </div>
+                <div class="col-md-12 col-sm-12 text-center coh-rep-cont" id="top-mut-freq-grp-cont" style="">
+                    <!-- graph -1 -->
+                    <div id="chart_1"></div>
+
+                </div>
+
+              </div>
+          </div>  
+    <!--  Top Gene end  -->
+
+
+
+
+
+  <!--   Top MUtation based on patients  -->
+
+
+    <div class="row mt-3 tp-gns-bsd-on-dom-hd coh-rep-hd">
+        <div class="col-md-12">
+            <h4>Top Varients based on patients count</h4>
+        </div>
+    </div>
+    <div class="row tp-gns-bsd-on-mut-freq">
+      <!-- top-gene-table -->
+        <div class="col-md-6 coh-tableview4 ml-2">
+            <p class="text-center mt-1 cohort-table-det">
+                This section provides top Mutation based on patients count.
+            </p>
+            <div class="col-md-12 col-sm-12 text-center coh-rep-ld" id="top-mut-freq-tbl-load" style="display: none;">
+                <img src="../assets/images/loader.gif">
+            </div>
+            <div class="col-md-12 col-sm-12 text-center coh-rep-cont" id="top-mut-freq-tbl-cont">
+              <table class="Top_mutation_table table co-sum-data-table dataTable no-footer " id="reportTable" role="grid" aria-describedby="reportTable_info">
+                <thead>
+                  <tr>
+                    <th>Gene</th>
+                    <th>Mutation</th>
+                    <th>Patients</th>
+                  </tr>
+                </thead>
+              </table>  
+            </div>          
+        </div>
+      <!-- top-gene-graph -->
+        <div class="col-md-6 coh-tableview4">
+          <p class="text-center mt-1 cohort-table-det">
+              Graphical representation of Mutation based on Patinets count
+          </p>
+          <div class="col-md-12 col-sm-12 text-center coh-rep-ld" id="top-mut-freq-grp-load" style="display: none;">
+              <img src="../assets/images/loader.gif">
+          </div>
+          <div class="col-md-12 col-sm-12 text-center coh-rep-cont" id="top-mut-freq-grp-cont" style="">
+              <!-- graph -1 -->
+              <div id="chart_2"></div>
+
+          </div>
+
+        </div>
+    </div>  
+
+  <!--   Top Mutation end -->
+
+
+  <!-- Gene & Mutation information  -->
+  <div class="row">
+    <div class="col-md-12 text-end">
+      <h4>Gene & Mutation Information <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="bottom"  aria-describedby="tooltip762070"></i></h4>
+    </div>
+    <div class="col-md-10 offset-1 mb-3  g_m_info">
+      <p>
+        <div class="gene_info">
+          <div class="gene_info_name" style="color:green">Gene :<span><ul></ul></span> </div>
+        </div>
+        <div class="mutation_info">
+          <div class="mutation_info_name" style="color:green">Mutation :<span><ul></ul></span></div>
+        </div>
+      </p>
+    </div>
+  </div>
+
+  <!-- Gene information end  -->
+
+ 
+
+
+
+<!-- Report page end -->
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Report page end -->
+
+      
+        </div>
+    </div>
+</div>
+<a href="#" class="scrollToTop btn-sm btn-default"><i class="fa-solid fa-angle-up"></i></a>
+<a href="#" class="coh-sideNavBtn btn-sm btn-default" dt-target="close" onclick="return false;" id="coh-sideNavBtn">
+    <i class="fa-solid fa-plus" dt-target="close" id="coh-sideNavBtnIcon"></i>
+</a>
+<div class="cohort-report-sidenav" id="cohort-report-sidenav">
+    <li><a class="repot-side-nav-link" dt-target="GenomicFindings" href="#">Genomic Findings</a></li>
+    <li><a class="repot-side-nav-link" dt-target="RegulatorySpliceElements" href="#">Regulatory Splice Elements</a></li>
+    <li><a class="repot-side-nav-link" dt-target="FunctionalAnalysis" href="#">Functional Analysis</a></li>
+</div>
+
+
+<script type="text/javascript" src="./assets/js/jquery.Scrollbar.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</div>
+              </div>
+            </div>
+            <div class="generating-report col-md-12 hidden">
+              <section class="clinical-report-section clinical-report-ft-block" style="">
+                <div class="row">
+                  <div class="col-md-4 offset-4">
+                    <div class="report-structure">
+                      <div class="resultGraph result-graph clinical-report-ft" style="display: none;">
+                        <div class="row">
+                          <div class="col-md-4 text-right spin-icon">
+                            <i class="fas fa-4x fa-redo-alt fa-spin"></i>
+                          </div>
+                          <div class="col-md-8 text-left">
+                            <h3>Generating report... </h3>
+                            <p>Please wait</p>
+                            <!-- <button type="button" name="button" class="btn btn-primary btn-xs waves-effect waves-button waves-circle" id="checkPdf" data-pcd="CO-ZVWF" data-cid="648" data-status="0">
+                              <span>Refresh</span>
+                            </button> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="app-content-loading col-md-12 text-center" style="display: none;">
+              <img src="./assets/images/loader.gif">
+              <app-loader><!----><div class="app-content-loading col-md-12 text-center" id="appContentLoader" style="display: none;">
+                  <div class="loading-panel-wrap">
+                    <div class="loading-panel">
+                      <span><h3>Loading...</h3></span>
+                    </div>
+                    <div class="shadow"></div>
+                  </div>
+                </div></app-loader>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="navbar-default app-footer text-center">
+    <ul class="nav justify-content-center app-footer">
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.genome.com" target="_blank" title="Genome International Corporation"><img src="../assets/images/gic_logo.svg" alt="Genome International Corporation"></a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#" class="about-genome" data-bs-toggle="modal" data-bs-target="#aboutGenome">About Genome Explorer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" class="external-data" data-bs-toggle="modal" data-bs-target="#externalData">External Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" class="cookie-policy" data-bs-toggle="modal" data-bs-target="#geFAQ">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" class="copyright-policy" data-bs-toggle="modal" data-bs-target="#termsConditions">Terms & Conditions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="userFeedbackBtn" href="#" class="app-feedback" data-bs-toggle="modal" data-bs-target="#userFeedback">Contact us</a>
+      </li> -->
+    </ul>
+  </footer>
+
+
+<!--
+<script src="/assets/js/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+-->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+  
+
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/intro.min.js"></script>
+<script src="./assets/js/jquery.Scrollbar.min.js"></script>
+<script src="./dist/app.js"></script>
+<script src="./dist/components.js"></script>
+<script src="./assets/js/session.js"></script>
+<script src="./assets/js/wz_tooltip.js"></script>
+<script type="text/javascript">
+ 
+  [...document.querySelectorAll('[data-bs-toggle="tooltip"]')]
+  .forEach(el=>{ new bootstrap.Tooltip(el)})
+  window.document.addEventListener('heightChange', handleEvent, false)
+  function handleEvent(e) {
+    $('#pathogenomeIframe').css({
+      height: e.detl
+    })
+  }
+</script>
+<script src="./assets/js/wz_tooltip.js"></script>
+<script type="module" src="./assets/js/script.js"></script>
+<script type="module" src="./assets/js/script_chart.js"></script>
+
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
