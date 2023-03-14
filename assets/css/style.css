@@ -1,17 +1,17 @@
-#summary_report_table th,
+.summary_report_table th,
 .Top_gene_table th,
 .Top_mutation_table th{
     text-align: center !important;
     font-weight: 400;
 }
-#summary_report_table td{
+.summary_report_table td{
     text-align: center;
     font-size:small;
     background-color: white !important;
     box-sizing: border-box;
 }
 
-#summary_report_table tfoot {
+.summary_report_table tfoot {
     display: table-header-group;
 }
 #chart_1,
