@@ -1736,7 +1736,9 @@ svg:not(:root).svg-inline--fa5 {
    
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <script src="//cdn.amcharts.com/lib/4/core.js"></script>
+<script src="//cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="//cdn.amcharts.com/lib/4/plugins/regression.js"></script> 
 </head>
 
 
@@ -1779,8 +1781,9 @@ svg:not(:root).svg-inline--fa5 {
           <li class="nav-item patient-input-container">
             <label for="queryby" class="control-label">New born ID <span><i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" style="color: #a6c5e0;" data-bs-original-title="Select the desired cohort" aria-label="Select the desired cohort"></i></span></label>
             <select class="form-control auto-select-input select2-hidden-accessible" id="patientInput" data-select2-id="patientInput" tabindex="-1" aria-hidden="true">
-              <option value="Cystic fibrosis" selected="" data-select2-id="2">Cystic fibrosis</option>
-              </select>
+              <option value="Cystic Fibrosis" >Cystic Fibrosis</option>
+              <option value="Marfan syndrome" >Marfan syndrome</option>
+            </select>
            
           </li>
 <!--  header selector end-->          
@@ -1924,11 +1927,11 @@ svg:not(:root).svg-inline--fa5 {
                           </li>
                           <li class="nav-item">
                             <label for="">Mutations</label>
-                            <h5 id="newbornPatVariantCount">72,012</h5>
+                            <h5 id="newbornPatVariantCount">0</h5>
                           </li>
                           <li class="nav-item">
                             <label for="">Mutated Genes</label>
-                            <h5 id="uniqueMutatedGenes">15,132</h5>
+                            <h5 id="uniqueMutatedGenes">0</h5>
                           </li>
                         </ul>
                       </div>
@@ -2351,7 +2354,7 @@ svg:not(:root).svg-inline--fa5 {
             </div>
             <div class="col-md-12 text-center" id="cohRep-sum-stat-cont">
               <div>
-                <table class="table display compact" id="summary_report_table">
+                <table class="table display compact summary_report_table" id="reportTable">
                   <thead>
                     <tr style="background-color:lightblue;" role="row">
                       <th class="sorting" tabindex="0">Gene</th>
@@ -2557,6 +2560,8 @@ svg:not(:root).svg-inline--fa5 {
     </div>
       <!-- Summary Report Table end -->
 
+
+
     <!-- Top Genes (Based On Mutation Frequency)  -->
           <div class="row mt-3 tp-gns-bsd-on-mut-freq-hd coh-rep-hd">
               <div class="col-md-12">
@@ -2567,7 +2572,7 @@ svg:not(:root).svg-inline--fa5 {
             <!-- top-gene-table -->
               <div class="col-md-6 coh-tableview4 ml-2">
                   <p class="text-center mt-1 cohort-table-det">
-                      This section provides Top frequent Mutations among the Newborn.
+                      This section provides Top <b>Frequent Mutations</b> among the Newborn.
                   </p>
                   <div class="col-md-12 col-sm-12 text-center coh-rep-ld" id="top-mut-freq-tbl-load" style="display: none;">
                       <img src="../assets/images/loader.gif">
